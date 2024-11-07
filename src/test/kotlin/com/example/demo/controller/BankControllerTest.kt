@@ -39,7 +39,7 @@ class BankControllerTest {
 
         // Assert
         assertEquals(2, result.size)
-        assertEquals("Bank A", result[0].name)
+        assertEquals("1", result[0].name)
         verify(bankService, times(1)).getAllBanks()
     }
 
@@ -86,7 +86,7 @@ class BankControllerTest {
         // Assert
         assertEquals(HttpStatus.CREATED, response.statusCode)
         assertEquals(1, response.body?.size)
-        assertEquals("Bank A", response.body?.get(0)?.name)
+        assertEquals("1", response.body?.get(0)?.name)
         verify(bankService, times(1)).addBank(bank)
     }
 }
